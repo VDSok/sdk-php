@@ -1,7 +1,6 @@
 {
     "name": "vdsok/sdk",
     "description": "Official PHP SDK for the VDSok Client API v1 (servers, domains, balance, invoices, webhooks).",
-    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "keywords": ["vdsok", "vds", "vps", "hosting", "api", "sdk", "psr-18"],
