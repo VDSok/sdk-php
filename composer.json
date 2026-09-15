@@ -1,0 +1,55 @@
+{
+    "name": "vdsok/sdk",
+    "description": "Official PHP SDK for the VDSok Client API v1 (servers, domains, balance, invoices, webhooks).",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["vdsok", "vds", "vps", "hosting", "api", "sdk", "psr-18"],
+    "homepage": "https://github.com/VDSok/sdk-php",
+    "support": {
+        "email": "support@vdsok.guru",
+        "docs": "https://vdsok.guru/developers",
+        "source": "https://github.com/VDSok/sdk-php",
+        "issues": "https://github.com/VDSok/sdk-php/issues"
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.1 || ^2.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.8",
+        "nyholm/psr7": "^1.8",
+        "php-http/discovery": "^1.19",
+        "php-http/mock-client": "^1.6",
+        "phpunit/phpunit": "^10.5"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "Recommended PSR-18 client; picked up automatically when installed (composer require vdsok/sdk guzzlehttp/guzzle).",
+        "php-http/discovery": "Auto-discovers any other PSR-18 client and PSR-17 factories when Guzzle is not installed."
+    },
+    "autoload": {
+        "psr-4": {
+            "Vdsok\\Sdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vdsok\\Sdk\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "@php tools/lint.php"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
